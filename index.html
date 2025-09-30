@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      rel="shortcut icon"
+      href="./asset/image/img/cloudy.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="asset/css/tailwind.css" />
+  </head>
+  <body>
+    <div class="card glass-bg">
+      <div class="search">
+        <input
+          class="js-search-input"
+          type="text"
+          placeholder="Enter city name" />
+        <button class="search-button-js">
+          <img class="icon" src="./asset/image/img/search.png" alt="" />
+        </button>
+        <button onclick="handleGeoClick()" class="get-location-btn">
+          Get Location
+        </button>
+      </div>
+      <div class="weather-container">
+        <div class="city-name-container flex justify-between pt-1 items-center">
+          <p class="city-name text-start text-[40px]">Phnom Penh</p>
+          <div class="min-max-tem flex">
+            <div class="container-sun-min-max flex">
+              <div class="">
+                <div class="min flex items-center">
+                  <img
+                    class="arrow-icon"
+                    src="./asset/image/svg/down-arrow.svg"
+                    alt="" />
+                  <p class="min-tem padding-icon">12 °C</p>
+                </div>
+                <div class="max flex items-center">
+                  <img
+                    class="arrow-icon"
+                    src="./asset/image/svg/up-arrow.svg"
+                    alt="" />
+                  <p class="max-temp padding-icon">30 °C</p>
+                </div>
+              </div>
+              <div>
+                <div class="sunrise flex items-center">
+                  <img
+                    class="sun-icon"
+                    src="./asset/image/svg/sunrise-arrow.svg"
+                    alt="" />
+                  <p class="time-sunrise padding-icon">5:30AM</p>
+                </div>
+                <div class="sunset flex items-center">
+                  <img
+                    class="sun-icon"
+                    src="./asset/image/svg/sunet-arrow.svg"
+                    alt="" />
+                  <p class="time-sunset padding-icon">6:00PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="climate-change">
+          <div class="flex items-center">
+            <img class="icon" src="./asset/image/svg/humidity.svg" alt="" />
+            <p class="humidity">80 %</p>
+          </div>
+          <div class="flex items-center">
+            <img class="icon" src="./asset/image/svg/wind.svg" alt="" />
+            <p class="wind-speed">102km/h</p>
+          </div>
+        </div>
+        <div class="tem-sec flex items-center">
+          <div class="text-left">
+            <p class="degree">28 c°</p>
+            <p class="feelLike text-2xl">Feels Like 30°</p>
+          </div>
+          <img
+            class="icon-weather"
+            src="./asset/image/svg/cloudy-day.svg"
+            alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./script/index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</html>
